@@ -19,7 +19,7 @@ sub bubblebabble {
     my $dlen = length $param{Digest};
 
     my $seed = 1;
-    my $rounds = ($dlen / 2) + 1;
+    my $rounds = int($dlen / 2) + 1;
     my $retval = 'x';
     for my $i (0..$rounds-1) {
         if ($i+1 < $rounds || $dlen % 2) {
