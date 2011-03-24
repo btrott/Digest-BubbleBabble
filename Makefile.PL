@@ -1,11 +1,12 @@
-# $Id: Makefile.PL,v 1.1.1.1 2001/05/03 01:11:11 btrott Exp $
+use inc::Module::Install;
+name 'Digest-BubbleBabble';
+all_from 'lib/Digest/BubbleBabble.pm';
+readme_from 'lib/Digest/BubbleBabble.pm';
 
-use ExtUtils::MakeMaker;
+test_requires 'Test::More';
 
-WriteMakefile(
-    NAME => 'Digest::BubbleBabble',
-    DISTNAME => 'Digest-BubbleBabble',
-    VERSION_FROM => 'BubbleBabble.pm',
-    AUTHOR => 'Benjamin Trott <ben@rhumba.pair.com>',
-    ABSTRACT => 'Create bubble-babble fingerprints',
-);
+use_test_base;
+auto_include_deps;
+author_tests('xt');
+auto_set_repository;
+WriteAll;
