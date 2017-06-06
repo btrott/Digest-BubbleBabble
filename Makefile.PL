@@ -1,3 +1,4 @@
+use lib '.';
 use inc::Module::Install;
 name 'Digest-BubbleBabble';
 all_from 'lib/Digest/BubbleBabble.pm';
