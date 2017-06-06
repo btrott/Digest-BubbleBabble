@@ -1,5 +1,8 @@
 Revision history for Digest::BubbleBabble
 
+    - Fix Makefile.PL being broken due to '.' removal from default @INC
+      since Perl 5.25.11 ( RT#120808 )
+
 0.02  2011.03.23
     - Fixed a bug affecting input strings with an odd number of
       characters. Thanks to Ken T Takusagawa for the report.
